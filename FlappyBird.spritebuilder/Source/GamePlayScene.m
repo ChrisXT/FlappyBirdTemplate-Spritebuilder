@@ -19,7 +19,8 @@
 
 -(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-    [Character flap];
+    [character flap];
+    
     
     
 }
