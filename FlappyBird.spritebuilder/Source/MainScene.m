@@ -145,6 +145,24 @@
     
     physicsNode.position = ccp(physicsNode.position.x - (character.physicsBody.velocity.x * delta), physicsNode.position.y);
     
+    
+    for (CCNode *cloud in _clouds)
+    {
+        cloud.position = ccp(cloud.position.x -
+                             (character.physicsBody.velocity.x * delta), cloud.position.y);
+        
+        if(cloud.position.x <= (-1 * cloud.contentSize.width))
+        {
+            cloud.position = ccp(cloud.position.x +
+                                 2 * cloud.contentSize.width, cloud.position.y);
+        }
+            
+        
+        
+        
+    }
+    
+    
     for (CCNode *bush in _bushes)
     {
         bush.position = ccp(bush.position.x -
